@@ -5,7 +5,7 @@ docker-hadoop-spark-hive 快速构建你的大数据环境
 这是一个 基于docker 构建的 一键启停 大数据 学习平台
 
 - hadoop 2.8
-- hive 2.1.0
+- hive 2.3.2
 - spark 2.1.0
 
 要用到docker 你可能需要使用虚拟环境 这里 我用的是 virtualbox 
