@@ -20,19 +20,19 @@ docker-hadoop-spark-hive 快速构建你的大数据环境
 
 ## 1、安装docker 
 
-```
+```shell
 sudo apt install docker.io
 ```
 
 ## 2、安装 docker-compose
 
-```
+```shell
 sudo apt install docker-compose
 ```
 
 ## 3、开始你的表演
 
-```
+```shell
 # 进入 docker-compose.yml 的目录
 ./run.sh
 
