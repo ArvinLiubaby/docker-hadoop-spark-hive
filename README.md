@@ -33,6 +33,8 @@ sudo apt install docker-compose
 ## 3、开始你的表演
 
 ```shell
+docker network create es_network
+
 # 进入 docker-compose.yml 的目录
 ./run.sh
 
