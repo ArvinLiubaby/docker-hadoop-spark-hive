@@ -18,19 +18,19 @@ docker-hadoop-spark-hive 快速构建你的大数据环境
 
 接下来 介绍一下 如何使用
 
-## 首先你需要安装docker 
+## 1、安装docker 
 
 ```
 sudo apt install docker.io
 ```
 
-## 安装 docker-compose
+## 2、安装 docker-compose
 
 ```
 sudo apt install docker-compose
 ```
 
-## 开始你的表演
+## 3、开始你的表演
 
 ```
 # 进入 docker-compose.yml 的目录
@@ -49,9 +49,40 @@ docker-compose up -d
 
 vim *.env
 
-这里需要注意，环境变量 基本不需要设置，如果你玩大了，别给我提issue 。有能耐你自己解决啊 （傲娇脸）
+这里需要注意，环境变量 基本不需要设置。
 
 # 如果需要修改 docker 容器 运行的一些选项
 vim docker-compose.yml
 
 ```
+
+## 4、环境验证
+### 4.1 browser访问spark hadoop es kibana等
+
+本机访问如下几个地址：
+
+```tex
+localhost:8080	-- spark
+localhost:50070 -- hadoop NN
+localhost:9200	-- ES
+localhost:5601	-- Kibana
+```
+
+如果可以正确打开则没问题。
+
+### 4.2 进入hive：
+
+进入容器
+
+bash前面的是你的容器ID，通过`docker ps`可以看到。
+
+```shell
+docker exec -it b002969ab690 bash
+```
+
+进入beeline
+
+```shell
+beeline -u jdbc:hive2://localhost:10000
+```
+至此已经进入Hive环境，可以自行尝试hive的语句。
